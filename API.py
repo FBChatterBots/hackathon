@@ -3,6 +3,10 @@ from PIL import Image
 from io import BytesIO
 app = Flask(__name__)
 
+# George: I need to be able to call a function in this file which:
+# takes in a single argument -  the string url
+# returns a JSON format response with key values pairs - i.e
+# {"face1": "happy", "face2": "sad"}
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
