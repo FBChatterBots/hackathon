@@ -9,7 +9,7 @@ def index():
   if (request.method == 'POST'):
     some_json = request.get_json()
     print(some_json)
-    return jsonify({'you sent': some_json}), 201
+    return jsonify({'you sent this': some_json}), 201
   else:
     return jsonify({"about" : "Hello World!"})
   
@@ -20,7 +20,7 @@ def index():
 @app.route('/text/<string:stuff>', methods={'GET'})
 def run_file(stuff):
   
-  return jsonify({'result' : stuff})
+  return jsonify({'result is' : stuff})
 
 
 @app.route('/multiply/<int:num>', methods={'GET'})
